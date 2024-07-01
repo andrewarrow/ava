@@ -1,13 +1,13 @@
 package main
 
 import (
-  "ava/app"
-  "embed"
-  "math/rand"
-  "os"
-  "time"
+	"ava/app"
+	"embed"
+	"math/rand"
+	"os"
+	"time"
 
-  "github.com/andrewarrow/feedback/router"
+	"github.com/andrewarrow/feedback/router"
 )
 
 //go:embed app/feedback.json
@@ -39,7 +39,7 @@ func main() {
 		router.EmbeddedAssets = embeddedAssets
 		r := router.NewRouter("DATABASE_URL", embeddedFile)
 		r.Paths["/"] = app.Welcome
-		//r.Paths["ava"] = app.ava
+		r.Paths["ava"] = app.Ava
 		//r.Paths["api"] = app.HandleApi
 		//r.Paths["login"] = app.Login
 		//r.Paths["register"] = app.Register
@@ -50,4 +50,3 @@ func main() {
 	} else if arg == "help" {
 	}
 }
-    

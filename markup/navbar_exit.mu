@@ -1,4 +1,4 @@
-{{ define "navbar" }}
+{{ define "navbar_exit" }}
   div navbar bg-base-200 font-familjen
     div navbar-start 
       div btn btn-ghost text-4xl
@@ -7,8 +7,6 @@
     div navbar-center flex hidden md:block
     div navbar-end
       div hidden md:block flex space-x-3
-        a href=/ava/play link link-hover
-          Play
-        a href=/ava/faq link link-hover
-          FAQ
+        a href=/ link link-hover
+          Exit
   {{ end }}
