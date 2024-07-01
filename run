@@ -1,0 +1,8 @@
+go mod tidy
+go build
+./ava render
+tailwindcss -i assets/css/tail.components.css -o assets/css/tail.min.css --minify
+go build
+echo 3
+./ava run 3000
+    
