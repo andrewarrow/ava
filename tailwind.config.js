@@ -6,9 +6,8 @@ module.exports = {
       colors: {
         'cream': '#EFDECD',
         'lime': '#8FBC8F',
-        'a-blue': '#4A88EE',
-        'a-dark': '#00364d',
-        'a-good': '#00364d'
+        'a-bottom': '#E3E4DF',
+        'a-top': '#D0C6BB',
       },
       fontFamily: {
         pragmatica: ['Pragmatica'],

@@ -1,6 +1,7 @@
 div p-0 
   {{ template "navbar_exit" . }}
-  div flex items-start justify-center
-    div w-1/2
-      a href=/ava/play
-        img rounded-md src=https://i.imgur.com/omYjFJK.jpeg
+  div 
+    div rounded-tl-lg rounded-tr-lg bg-gradient-to-b from-a-top to-a-bottom h-1/2 w-full
+      hi
+    div rounded-bl-lg rounded-br-lg bg-yellow-300 h-1/2 w-full
+      hi
