@@ -8,13 +8,7 @@
     div navbar-end
       div hidden md:block flex space-x-3
         a href=/frame/routing link link-hover
-          Routing
-        a href=/frame/sql link link-hover
-          SQL
-        a href=/frame/migrations link link-hover
-          Migrations
-        a href=/frame/wasm link link-hover
-          WASM
+          Play
         a href=/frame/faq link link-hover
           FAQ
   {{ end }}

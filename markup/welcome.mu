@@ -1,4 +1,5 @@
 div p-0 
   {{ template "navbar" . }}
-  div flex flex-col md:flex-row space-x-9 items-start justify-center
-    hi
+  div flex items-start justify-center
+    div
+      img rounded-full src=https://i.imgur.com/omYjFJK.jpeg
