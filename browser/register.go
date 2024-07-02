@@ -16,11 +16,15 @@ func RegisterEvents() {
 	}
 	if Global.Start == "play.html" {
 		b := Document.Id("board")
-		ctx := b.JValue.Call("getContext", "2d")
+		canvas := b.JValue
+		width := canvas.Get("width").Int()
+		height := canvas.Get("height").Int()
+		ctx := canvas.Call("getContext", "2d")
+		ctx.Call("clearRect", 0, 0, width, height)
+		ctx.Set("strokeStyle", "rgba(0, 0, 0, 1.0)")
 		ctx.Call("beginPath")
 		ctx.Call("moveTo", 9, 9)
 		ctx.Call("lineTo", 9, 9+300)
-		ctx.Set("strokeStyle", "white")
 		ctx.Call("stroke")
 	} else if Global.Start == "login.html" {
 		Global.AutoForm("login", "ava", nil, afterLogin)
