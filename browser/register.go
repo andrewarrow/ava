@@ -28,10 +28,12 @@ func RegisterEvents() {
 		//ctx.Set("msImageSmoothingEnabled", false)
 		//ctx.Set("imageSmoothingEnabled", false)
 		ctx.Set("lineWidth", 2)
-		ctx.Call("beginPath")
-		ctx.Call("moveTo", 9, 0)
-		ctx.Call("lineTo", 9, height)
-		ctx.Call("stroke")
+		for i := 0; i < 9; i++ {
+			ctx.Call("beginPath")
+			ctx.Call("moveTo", 18+(i*36), 0)
+			ctx.Call("lineTo", 18+(i*36), height)
+			ctx.Call("stroke")
+		}
 	} else if Global.Start == "login.html" {
 		Global.AutoForm("login", "ava", nil, afterLogin)
 	} else if Global.Start == "register.html" {
